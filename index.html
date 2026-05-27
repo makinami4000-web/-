@@ -1448,7 +1448,7 @@ document.getElementById('register-form')?.addEventListener('submit', async funct
   const email = document.getElementById('reg-email').value.trim();
   const password = document.getElementById('reg-password').value;
   const role = document.getElementById('reg-role').value;
-  const name = document.getElementById('reg-name').value.trim(); // ← Имя из формы
+ const name = document.getElementById('register-name').value.trim();
   
   if (!email || !password || password.length < 6) {
     alert('Пароль должен быть не менее 6 символов');
