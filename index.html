@@ -383,11 +383,7 @@ input[type="checkbox"]:disabled {
 
 <!-- Логотип -->
 <a href="#" class="logo" onclick="showPage('home'); return false;" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-  <!-- Здесь src="Профи.png" означает, что картинка лежит рядом с html файлом -->
   <img src="Profi.png" alt="ПРОФИ" style="height: 90px; width: auto; display: block;">
-  
-  <!-- Если хотите добавить текст рядом с логотипом, раскомментируйте строку ниже -->
-  <!-- <span style="color: white; font-weight: 800; font-size: 1.2rem;">ПРОФИ</span> -->
 </a>
 
    <!-- Навигация -->
@@ -1513,16 +1509,16 @@ auth.onAuthStateChanged(async (user) => {
       id: user.uid,
       email: user.email,
       role: userData?.role || 'student',
-      name: userData?.name || user.email.split('@')[0] // ← Берём имя из Firestore!
+      name: userData?.name || user.email.split('@')[0] 
     };
     updateAuthUI();
-    showPage('dashboard'); // ← Для авторизованных открывается дашборд
+    showPage('dashboard'); 
   } else {
     currentUser = null;
     updateAuthUI();
-    showPage('home'); // ✅ ВАЖНО: при отсутствии авторизации показываем ГЛАВНУЮ страницу
+    showPage('home'); 
   }
-  // ← ПОКАЗЫВАЕМ ИНТЕРФЕЙС ТОЛЬКО ПОСЛЕ ЗАГРУЗКИ ДАННЫХ!
+  
   document.body.style.opacity = '1';
   if (spinner) spinner.style.display = 'none';
 });
@@ -1531,7 +1527,7 @@ function logout() {
   auth.signOut().then(() => {
     currentUser = null;
     updateAuthUI();
-    showPage('home'); // ✅ После выхода возвращаемся на главную страницу
+    showPage('home'); 
   });
 }
 
@@ -1547,7 +1543,7 @@ let editingTestIndex = null;
 let questionCounter = 0;
 
 async function loadTeacherCourses() {
-  // Проверяем авторизацию
+  
   if (!currentUser || !currentUser.id) {
     console.warn('Пользователь не авторизован');
     return;
@@ -1578,7 +1574,7 @@ async function loadTeacherCourses() {
     }
     
     courses.forEach(course => {
-  // Используем сохраненную категорию вместо определения по названию
+  
   let categoryIcon = '💻';
   let categoryName = 'Программирование';
   switch (course.category) {
@@ -1595,12 +1591,10 @@ async function loadTeacherCourses() {
       categoryName = 'Программирование';
   }
 
-  // Уровень → метка
   const levelLabel = 
     course.level === 'beginner' ? 'Новичок' :
     course.level === 'intermediate' ? 'Популярный' : 'Продвинутый';
 
-  // Длительность (примерные значения — можно взять из курса или захардкодить)
   let durationText = '12 занятий • 4 недели';
   if (categoryName === 'Дизайн') durationText = '16 занятий • 6 недель';
   if (categoryName === 'Базы данных') durationText = '20 занятий • 8 недель';
@@ -1891,7 +1885,7 @@ const fileButton = lec.hasFile && (lec.downloadUrl || lec.fileUrl) ?
 
 
 // Редактирование лекций (через Firestore)
-let editingLectureDocId = null; // ← храним ID документа Firestore, а не индекс
+let editingLectureDocId = null; 
 
 function editLecture(courseId, lectureDocId) {
   editingLectureDocId = lectureDocId;
@@ -1924,7 +1918,7 @@ async function editTest(courseId, testDocId) {
 
     const test = testDoc.data();
     currentCourseId = courseId;
-    editingTestDocId = testDocId; // ← храним ID документа, а не индекс
+    editingTestDocId = testDocId; 
 
     document.getElementById('test-course-id').value = courseId;
     document.getElementById('test-title').value = test.title;
@@ -1946,7 +1940,6 @@ function addQuestionField(questionData = null) {
     const container = document.getElementById('questions-container');
     const idx = questionCounter++;
     
-    // ✅ Дефолтные значения для всех типов вопросов
     const q = questionData || { 
         text: '', 
         type: 'single', 
@@ -1956,7 +1949,6 @@ function addQuestionField(questionData = null) {
         sequence: []
     };
     
-    // ✅ Гарантируем наличие массивов и свойств
     if (!q.options) q.options = [{ text: '', correct: false }];
     if (!q.matches) q.matches = [];
     if (!q.sequence) q.sequence = [];
@@ -1967,7 +1959,6 @@ function addQuestionField(questionData = null) {
     questionEl.draggable = true;
     questionEl.dataset.questionIndex = idx;
     
-    // === Генерация HTML в зависимости от типа вопроса ===
     let typeSpecificHTML = '';
     
     // ОДИН ИЛИ НЕСКОЛЬКО ОТВЕТОВ
@@ -2373,7 +2364,7 @@ for (const el of questionsEls) {
             return;
         }
         
-        questionData.options = options;  // ✅ Правильное свойство
+        questionData.options = options;  
         
     // === УСТАНОВЛЕНИЕ СООТВЕТСТВИЯ ===
     } else if (type === 'matching') {
@@ -2406,7 +2397,7 @@ for (const el of questionsEls) {
             return;
         }
         
-        questionData.correctAnswer = correctAnswer;  // ✅ Теперь переменная объявлена!
+        questionData.correctAnswer = correctAnswer;  
         
     // === ПОСЛЕДОВАТЕЛЬНОСТЬ ===
     } else if (type === 'sequence') {
@@ -2470,10 +2461,6 @@ async function deleteCourse(courseId) {
 
     // Удаляем сам курс
     await db.collection('courses').doc(courseId).delete();
-
-    // Удаляем прогресс студентов по этому курсу (опционально)
-    // Можно оставить, если хотите сохранить историю
-    // Но обычно при удалении курса удаляют и связанный прогресс
 
     alert('🗑️ Курс удалён.');
     backToCourses();
@@ -2548,7 +2535,6 @@ async function loadCoursesCatalog() {
       return matchesSearch && matchesCategory;
     });
     
-    // Генерируем современные карточки
     container.innerHTML = filteredCourses.map(course => {
       // Категория
       let categoryIcon = '💻';
@@ -2920,7 +2906,6 @@ async function submitTest() {
     let correctAnswers = 0;
     let totalQuestions = currentTest.questions.length;
 
-    // Проверяем ответы
 // Проверяем ответы
 for (let qi = 0; qi < currentTest.questions.length; qi++) {
     const q = currentTest.questions[qi];
@@ -2954,7 +2939,6 @@ for (let qi = 0; qi < currentTest.questions.length; qi++) {
                 const selectedIndex = parseInt(selected.value);
                 const rightItems = q.matches.map(m => m.right).sort(() => Math.random() - 0.5);
                 // Проверяем, соответствует ли выбранный элемент правильному
-                // Здесь нужна более сложная логика, упрощенно:
                 if (q.matches[selectedIndex]?.right === match.right) {
                     correctMatches++;
                 }
@@ -3004,7 +2988,7 @@ const newResult = {
 
   // Отображаем результат
 const resultDiv = document.getElementById('test-result');
-const safeCourseId = courseId.replace(/'/g, "\\'"); // ← ЭКРАНИРОВАНИЕ
+const safeCourseId = courseId.replace(/'/g, "\\'"); 
 resultDiv.innerHTML = `
 <div style="color: hsl(var(--primary)); font-weight: bold; margin-bottom: 1rem; font-size: 1.3rem;">
     ✅ Тест завершён!
@@ -3106,7 +3090,7 @@ if (currentUser?.role === 'student') {
     const isCompleted = progressData[courseId]?.completedLectures?.[lectureIndex] || false;
     checkbox.checked = isCompleted;
 } else {
-    container.style.display = 'none'; // Скрываем ВЕСЬ блок (и текст тоже)
+    container.style.display = 'none'; 
 }
     console.log('📦 viewLecture: currentCourseId установлен в', courseId);
   
@@ -3536,7 +3520,7 @@ async function updateStudentStats() {
       }
     }
     
-    // ✅ ТАБЛИЦА ОЦЕНОК — ИСПРАВЛЕНО
+    // ТАБЛИЦА ОЦЕНОК
     const gradesTable = document.getElementById('grades-table');
     if (gradesTable) {
       const allScores = Object.values(userProgress).flatMap(c => c.testResults || []);
@@ -3724,14 +3708,14 @@ async function register() {
     // Сохраняем данные пользователя в Firestore
     await db.collection('users').doc(user.uid).set({
       email: user.email,
-      name: name, // ← Имя пользователя
+      name: name, 
       role: role
     });
     
     currentUser = {
       id: user.uid,
       email: user.email,
-      name: name, // ← Имя пользователя
+      name: name, 
       role: role
     };
     
