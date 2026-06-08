@@ -937,7 +937,7 @@ input[type="checkbox"]:disabled {
               color: hsl(var(--foreground));
             ">
               <option value="programming">Программирование</option>
-              <option value="design">Дизайн</option>
+              <option value="design">UX/UI-дизайн</option>
               <option value="databases">Базы данных</option>
             </select>
           </div>
@@ -1589,7 +1589,7 @@ switch (course.category) {
     case 'design':
         // Иконка Палитры (Дизайн)
         categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.667 0-.919-.743-1.666-1.667-1.666-.919 0-1.667-.743-1.667-1.667 0-.919.743-1.667 1.667-1.667.919 0 1.667-.743 1.667-1.667 0-.919.743-1.666 1.666-1.666.926 0 1.648-.746 1.648-1.667C19.395 4.88 17.353 2 12 2z"></path></svg>`;
-        categoryName = 'Дизайн';
+        categoryName = 'UX/UI-дизайн';
         break;
     case 'databases':
         // Иконка Базы данных (Серверы)
@@ -1607,7 +1607,7 @@ switch (course.category) {
     course.level === 'intermediate' ? 'Популярный' : 'Продвинутый';
 
   let durationText = '12 занятий • 4 недели';
-  if (categoryName === 'Дизайн') durationText = '16 занятий • 6 недель';
+  if (categoryName === 'UX/UI-дизайн') durationText = '16 занятий • 6 недель';
   if (categoryName === 'Базы данных') durationText = '20 занятий • 8 недель';
 
   const card = document.createElement('div');
@@ -2556,7 +2556,7 @@ switch (course.category) {
     case 'design':
         // Иконка Палитры (Дизайн)
         categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.667 0-.919-.743-1.666-1.667-1.666-.919 0-1.667-.743-1.667-1.667 0-.919.743-1.667 1.667-1.667.919 0 1.667-.743 1.667-1.667 0-.919.743-1.666 1.666-1.666.926 0 1.648-.746 1.648-1.667C19.395 4.88 17.353 2 12 2z"></path></svg>`;
-        categoryName = 'Дизайн';
+        categoryName = 'UX/UI-дизайн';
         break;
     case 'databases':
         // Иконка Базы данных (Серверы)
@@ -2576,7 +2576,7 @@ switch (course.category) {
       
       // Длительность
       let durationText = '12 занятий • 4 недели';
-      if (categoryName === 'Дизайн') durationText = '16 занятий • 6 недель';
+      if (categoryName === 'UX/UI-дизайн') durationText = '16 занятий • 6 недель';
       if (categoryName === 'Базы данных') durationText = '20 занятий • 8 недель';
       
       const safeId = course.id.replace(/'/g, "\\'");
@@ -3181,7 +3181,7 @@ switch (course.category) {
     case 'design':
         // Иконка Палитры (Дизайн)
         categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.667 0-.919-.743-1.666-1.667-1.666-.919 0-1.667-.743-1.667-1.667 0-.919.743-1.667 1.667-1.667.919 0 1.667-.743 1.667-1.667 0-.919.743-1.666 1.666-1.666.926 0 1.648-.746 1.648-1.667C19.395 4.88 17.353 2 12 2z"></path></svg>`;
-        categoryName = 'Дизайн';
+        categoryName = 'UX/UI-дизайн';
         break;
     case 'databases':
         // Иконка Базы данных (Серверы)
@@ -3201,7 +3201,7 @@ switch (course.category) {
         
         // Длительность
         let durationText = '12 занятий • 4 недели';
-        if (categoryName === 'Дизайн') durationText = '16 занятий • 6 недель';
+        if (categoryName === 'UX/UI-дизайн') durationText = '16 занятий • 6 недель';
         if (categoryName === 'Базы данных') durationText = '20 занятий • 8 недель';
         
         const card = document.createElement('div');
@@ -3485,28 +3485,33 @@ async function updateStudentStats() {
         const course = courses[courseId];
         if (!course) continue;
         
-        let categoryIcon = '💻';
-        let categoryName = 'Программирование';
-        switch (course.category) {
-          case 'design':
-            categoryIcon = '🎨';
-            categoryName = 'Дизайн';
-            break;
-          case 'databases':
-            categoryIcon = '📊';
-            categoryName = 'Базы данных';
-            break;
-          default:
-            categoryIcon = '💻';
-            categoryName = 'Программирование';
-        }
+
+let categoryIcon = '';
+let categoryName = 'Программирование';
+
+switch (course.category) {
+    case 'design':
+        // Иконка Палитры (Дизайн)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.667 0-.919-.743-1.666-1.667-1.666-.919 0-1.667-.743-1.667-1.667 0-.919.743-1.667 1.667-1.667.919 0 1.667-.743 1.667-1.667 0-.919.743-1.666 1.666-1.666.926 0 1.648-.746 1.648-1.667C19.395 4.88 17.353 2 12 2z"></path></svg>`;
+        categoryName = 'UX/UI-дизайн';
+        break;
+    case 'databases':
+        // Иконка Базы данных (Серверы)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>`;
+        categoryName = 'Базы данных';
+        break;
+    default:
+        // Иконка Кода (Программирование)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`;
+        categoryName = 'Программирование';
+}
         
         const levelLabel =
           course.level === 'beginner' ? 'Новичок' :
           course.level === 'intermediate' ? 'Популярный' : 'Продвинутый';
         
         let durationText = '12 занятий • 4 недели';
-        if (categoryName === 'Дизайн') durationText = '16 занятий • 6 недель';
+        if (categoryName === 'UX/UI-дизайн') durationText = '16 занятий • 6 недель';
         if (categoryName === 'Базы данных') durationText = '20 занятий • 8 недель';
         
         const safeId = course.id.replace(/'/g, "\\'");
@@ -3526,7 +3531,7 @@ async function updateStudentStats() {
           </div>
           <div style="padding: 1.25rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span style="background: ${levelLabel === 'Новичок' ? 'hsl(var(--primary)/0.2)' : levelLabel === 'Популярный' ? 'hsl(142, 76%, 37%)/0.2' : 'hsl(var(--primary)/0.2)'}; color: ${levelLabel === 'Новичок' ? 'hsl(var(--primary))' : levelLabel === 'Популярный' ? 'hsl(142, 76%, 37%)' : 'hsl(var(--primary))'}; padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">${levelLabel}</span>
+              <span style="background: hsl(var(--primary)/0.2); color: hsl(var(--primary)); padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">${levelLabel}</span>
               <span style="color: hsl(215, 20%, 65%); font-size: 0.85rem;">${durationText}</span>
             </div>
             <h3 style="font-size: 1.3rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">${escapeHtmlAttr(course.title)}</h3>
