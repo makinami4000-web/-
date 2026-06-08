@@ -539,7 +539,9 @@ input[type="checkbox"]:disabled {
       <!-- Карточка 1 -->
       <div class="card" style="background: hsl(var(--card)); border-radius: 1rem; overflow: hidden; border: 1px solid hsl(var(--border)); transition: all 0.3s;">
         <div style="height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: hsl(var(--card));">
-          <div style="font-size: 4rem; margin-bottom: 1rem;">💻</div>
+          <div style="margin-bottom: 1rem; color: hsl(var(--primary));">
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</div>
           <div style="font-size: 1.1rem; font-weight: 600; color: white;">Программирование</div>
         </div>
         <div style="padding: 1.25rem;">
@@ -558,12 +560,14 @@ input[type="checkbox"]:disabled {
       <!-- Карточка 2 -->
       <div class="card" style="background: hsl(var(--card)); border-radius: 1rem; overflow: hidden; border: 1px solid hsl(var(--border)); transition: all 0.3s;">
         <div style="height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: hsl(var(--card));">
-          <div style="font-size: 4rem; margin-bottom: 1rem;">🎨</div>
-          <div style="font-size: 1.1rem; font-weight: 600; color: white;">Дизайн</div>
+          <div style="margin-bottom: 1rem; color: hsl(var(--primary));">
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.667 0-.919-.743-1.666-1.667-1.666-.919 0-1.667-.743-1.667-1.667 0-.919.743-1.667 1.667-1.667.919 0 1.667-.743 1.667-1.667 0-.919.743-1.666 1.666-1.666.926 0 1.648-.746 1.648-1.667C19.395 4.88 17.353 2 12 2z"></path></svg>
+</div>
+          <div style="font-size: 1.1rem; font-weight: 600; color: white;">UX/UI-дизайн</div>
         </div>
         <div style="padding: 1.25rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span style="background: hsl(142, 76%, 37%)/0.2; color: hsl(142, 76%, 37%); padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">Популярный</span>
+            <span style="background: hsl(var(--primary)/0.2); color: hsl(var(--primary)); padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">Популярный</span>
             <span style="color: hsl(215, 20%, 65%); font-size: 0.85rem;">16 занятий • 6 недель</span>
           </div>
           <h3 style="font-size: 1.3rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Дизайн интерфейсов</h3>
@@ -577,7 +581,9 @@ input[type="checkbox"]:disabled {
       <!-- Карточка 3 -->
       <div class="card" style="background: hsl(var(--card)); border-radius: 1rem; overflow: hidden; border: 1px solid hsl(var(--border)); transition: all 0.3s;">
         <div style="height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: hsl(var(--card));">
-          <div style="font-size: 4rem; margin-bottom: 1rem;">📊</div>
+          <div style="margin-bottom: 1rem; color: hsl(var(--primary));">
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+</div>
           <div style="font-size: 1.1rem; font-weight: 600; color: white;">Базы данных</div>
         </div>
         <div style="padding: 1.25rem;">
@@ -585,7 +591,7 @@ input[type="checkbox"]:disabled {
             <span style="background: hsl(var(--primary)/0.2); color: hsl(var(--primary)); padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">Продвинутый</span>
             <span style="color: hsl(215, 20%, 65%); font-size: 0.85rem;">20 занятий • 8 недель</span>
           </div>
-          <h3 style="font-size: 1.3rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Базы данных</h3>
+          <h3 style="font-size: 1.3rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">СУБД</h3>
           <p style="color: hsl(215, 20%, 65%); font-size: 0.95rem; margin-bottom: 1rem;">
             Pandas, машинное обучение, визуализация, реальные кейсы.
           </p>
@@ -1575,21 +1581,26 @@ async function loadTeacherCourses() {
     
     courses.forEach(course => {
   
-  let categoryIcon = '💻';
-  let categoryName = 'Программирование';
-  switch (course.category) {
+
+let categoryIcon = '';
+let categoryName = 'Программирование';
+
+switch (course.category) {
     case 'design':
-      categoryIcon = '🎨';
-      categoryName = 'Дизайн';
-      break;
+        // Иконка Палитры (Дизайн)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.667 0-.919-.743-1.666-1.667-1.666-.919 0-1.667-.743-1.667-1.667 0-.919.743-1.667 1.667-1.667.919 0 1.667-.743 1.667-1.667 0-.919.743-1.666 1.666-1.666.926 0 1.648-.746 1.648-1.667C19.395 4.88 17.353 2 12 2z"></path></svg>`;
+        categoryName = 'Дизайн';
+        break;
     case 'databases':
-      categoryIcon = '📊';
-      categoryName = 'Базы данных';
-      break;
+        // Иконка Базы данных (Серверы)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>`;
+        categoryName = 'Базы данных';
+        break;
     default:
-      categoryIcon = '💻';
-      categoryName = 'Программирование';
-  }
+        // Иконка Кода (Программирование)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`;
+        categoryName = 'Программирование';
+}
 
   const levelLabel = 
     course.level === 'beginner' ? 'Новичок' :
@@ -1615,7 +1626,7 @@ async function loadTeacherCourses() {
     </div>
     <div style="padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-        <span style="background: ${levelLabel === 'Новичок' ? 'hsl(var(--primary)/0.2)' : levelLabel === 'Популярный' ? 'hsl(142, 76%, 37%)/0.2' : 'hsl(var(--primary)/0.2)'}; color: ${levelLabel === 'Новичок' ? 'hsl(var(--primary))' : levelLabel === 'Популярный' ? 'hsl(142, 76%, 37%)' : 'hsl(var(--primary))'}; padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">${levelLabel}</span>
+        <span style="background: hsl(var(--primary)/0.2); color: hsl(var(--primary)); padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">${levelLabel}</span>
         <span style="color: hsl(215, 20%, 65%); font-size: 0.85rem;">${durationText}</span>
       </div>
       <h3 style="font-size: 1.3rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">${escapeHtmlAttr(course.title)}</h3>
@@ -2537,21 +2548,26 @@ async function loadCoursesCatalog() {
     
     container.innerHTML = filteredCourses.map(course => {
       // Категория
-      let categoryIcon = '💻';
-      let categoryName = 'Программирование';
-      switch (course.category) {
-        case 'design':
-          categoryIcon = '🎨';
-          categoryName = 'Дизайн';
-          break;
-        case 'databases':
-          categoryIcon = '📊';
-          categoryName = 'Базы данных';
-          break;
-        default:
-          categoryIcon = '💻';
-          categoryName = 'Программирование';
-      }
+
+let categoryIcon = '';
+let categoryName = 'Программирование';
+
+switch (course.category) {
+    case 'design':
+        // Иконка Палитры (Дизайн)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.667 0-.919-.743-1.666-1.667-1.666-.919 0-1.667-.743-1.667-1.667 0-.919.743-1.667 1.667-1.667.919 0 1.667-.743 1.667-1.667 0-.919.743-1.666 1.666-1.666.926 0 1.648-.746 1.648-1.667C19.395 4.88 17.353 2 12 2z"></path></svg>`;
+        categoryName = 'Дизайн';
+        break;
+    case 'databases':
+        // Иконка Базы данных (Серверы)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>`;
+        categoryName = 'Базы данных';
+        break;
+    default:
+        // Иконка Кода (Программирование)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`;
+        categoryName = 'Программирование';
+}
       
       // Уровень
       const levelLabel = 
@@ -2572,7 +2588,7 @@ async function loadCoursesCatalog() {
           </div>
           <div style="padding: 1.25rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span style="background: ${levelLabel === 'Новичок' ? 'hsl(var(--primary)/0.2)' : levelLabel === 'Популярный' ? 'hsl(142, 76%, 37%)/0.2' : 'hsl(var(--primary)/0.2)'}; color: ${levelLabel === 'Новичок' ? 'hsl(var(--primary))' : levelLabel === 'Популярный' ? 'hsl(142, 76%, 37%)' : 'hsl(var(--primary))'}; padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">${levelLabel}</span>
+              <span style="background: hsl(var(--primary)/0.2); color: hsl(var(--primary)); padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">${levelLabel}</span>
               <span style="color: hsl(215, 20%, 65%); font-size: 0.85rem;">${durationText}</span>
             </div>
             <h3 style="font-size: 1.3rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">${escapeHtmlAttr(course.title)}</h3>
@@ -3156,20 +3172,27 @@ async function loadStudentCourses() {
         const course = courseDoc.data();
         
         // Определяем категорию по названию
-        let categoryIcon = '💻';
-        let categoryName = 'Программирование';
-        if (course.title.toLowerCase().includes('дизайн') || 
-            course.title.toLowerCase().includes('ui') || 
-            course.title.toLowerCase().includes('figma')) {
-          categoryIcon = '🎨';
-          categoryName = 'Дизайн';
-        } else if (course.title.toLowerCase().includes('баз') || 
-                 course.title.toLowerCase().includes('данных') || 
-                 course.title.toLowerCase().includes('sql') || 
-                 course.title.toLowerCase().includes('pandas')) {
-          categoryIcon = '📊';
-          categoryName = 'Базы данных';
-        }
+// Внутри функций loadTeacherCourses, loadCoursesCatalog и loadStudentCourses
+
+let categoryIcon = '';
+let categoryName = 'Программирование';
+
+switch (course.category) {
+    case 'design':
+        // Иконка Палитры (Дизайн)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.667 0-.919-.743-1.666-1.667-1.666-.919 0-1.667-.743-1.667-1.667 0-.919.743-1.667 1.667-1.667.919 0 1.667-.743 1.667-1.667 0-.919.743-1.666 1.666-1.666.926 0 1.648-.746 1.648-1.667C19.395 4.88 17.353 2 12 2z"></path></svg>`;
+        categoryName = 'Дизайн';
+        break;
+    case 'databases':
+        // Иконка Базы данных (Серверы)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>`;
+        categoryName = 'Базы данных';
+        break;
+    default:
+        // Иконка Кода (Программирование)
+        categoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary));"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`;
+        categoryName = 'Программирование';
+}
         
         // Уровень → метка
         const levelLabel = 
